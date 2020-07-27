@@ -17,7 +17,6 @@ def Classifier(
         target, 
         num_classifiers_train=2, 
         num_classifiers_test=1, 
-        constraint='softplus',
         init='kaiming_u', 
         use_init=False
     ):
@@ -26,7 +25,6 @@ def Classifier(
         return usps.Predictor(
             num_classifiers_train, 
             num_classifiers_test, 
-            constraint, 
             init, 
             use_init
         )
@@ -35,7 +33,6 @@ def Classifier(
         return svhn2mnist.Predictor(
             num_classifiers_train, 
             num_classifiers_test, 
-            constraint, 
             init, 
             use_init
         )
@@ -44,7 +41,6 @@ def Classifier(
         return syn2gtrsb.Predictor(
             num_classifiers_train, 
             num_classifiers_test, 
-            constraint, 
             init, 
             use_init
         )
