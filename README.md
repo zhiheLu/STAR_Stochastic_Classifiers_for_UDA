@@ -1,4 +1,4 @@
-# Stochastic Classifier for Unsupervised Domain Adaptation (CVPR2020)
+# Stochastic Classifiers for Unsupervised Domain Adaptation (CVPR2020)
 
 ## Please find details in the folder.
 
