@@ -1,6 +1,8 @@
 # Stochastic Classifiers for Unsupervised Domain Adaptation (CVPR2020)
 
-## Please find details in the folder.
+## Introduction
+
+This is the implementation for STAR (STochastic clAssifieRs). The main idea for that is to build a distribution over the weights of the classifiers. With that, infinite number of classifiers can be sampled without extra parameters.
 
 ## Reference
 ```
