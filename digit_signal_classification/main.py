@@ -46,7 +46,7 @@ parser.add_argument('--num_classifiers_train', type=int, default=2, metavar='N',
 parser.add_argument('--num_classifiers_test', type=int, default=20, metavar='N',
                     help='the number of classifiers used in testing')
 parser.add_argument('--gpu_devices', type=str, default='0', help='the device you use')
-parser.add_argument('--loss_process', type=str, default='mean', 
+parser.add_argument('--loss_process', type=str, default='sum', 
                     help='mean or sum of the loss')
 parser.add_argument('--log_dir', type=str, default='record', metavar='N',
                     help='the place to store the logs')
