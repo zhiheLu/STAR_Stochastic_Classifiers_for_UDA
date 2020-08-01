@@ -7,7 +7,7 @@
 This is the implementation for STAR (STochastic clAssifieRs). The main idea for that is to build a distribution over the weights of the classifiers. With that, infinite number of classifiers can be sampled without extra parameters.
 
 ## Architecture
-<a href="url"><img src="https://github.com/zhiheLu/STAR_Stochastic_Classifiers_for_UDA/tree/master/digit_signal_classification/doc/architecture_small.png" align="center" height="300" width="300" ></a>
+<a href="url"><img src="https://github.com/zhiheLu/STAR_Stochastic_Classifiers_for_UDA/tree/master/digit_signal_classification/doc/architecture_small.png" align="center" height="200" width="200" ></a>
 
 ## Citation
 
