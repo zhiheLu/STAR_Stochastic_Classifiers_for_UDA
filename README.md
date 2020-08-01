@@ -4,7 +4,10 @@
 
 This is the implementation for STAR (STochastic clAssifieRs). The main idea for that is to build a distribution over the weights of the classifiers. With that, infinite number of classifiers can be sampled without extra parameters.
 
-## Reference
+## Citation
+
+If you find this helpful, please cite it. Thanks.
+
 ```
 @InProceedings{Lu_2020_CVPR,
 author = {Lu, Zhihe and Yang, Yongxin and Zhu, Xiatian and Liu, Cong and Song, Yi-Zhe and Xiang, Tao},
