@@ -19,7 +19,7 @@ def Classifier(
         num_classifiers_test=1, 
         init='kaiming_u', 
         use_init=False
-    ):
+):
 
     if source == 'usps' or target == 'usps':
         return usps.Predictor(

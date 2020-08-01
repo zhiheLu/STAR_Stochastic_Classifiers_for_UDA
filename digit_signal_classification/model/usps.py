@@ -70,7 +70,6 @@ class Predictor(nn.Module):
             function_init[init](self.fc3_mu)
 
     def forward(self, x, only_mu=True):
-
         x = F.dropout(x, training=self.training, p=self.prob)
         x = F.relu(self.bn1_fc(self.fc1(x)))
         x = F.dropout(x, training=self.training, p=self.prob)

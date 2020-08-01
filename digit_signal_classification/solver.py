@@ -89,12 +89,21 @@ class Solver(object):
         self.interval = interval
         self.writer = SummaryWriter()
 
-        self.opt_c, self.opt_g = self.set_optimizer(which_opt=optimizer, lr=learning_rate)
+        self.opt_c, self.opt_g = self.set_optimizer(
+            which_opt=optimizer,
+            lr=learning_rate
+        )
         self.lr = learning_rate
 
         # Learning rate scheduler
-        self.scheduler_g = optim.lr_scheduler.CosineAnnealingLR(self.opt_g, float(args.max_epoch))
-        self.scheduler_c = optim.lr_scheduler.CosineAnnealingLR(self.opt_c, float(args.max_epoch))
+        self.scheduler_g = optim.lr_scheduler.CosineAnnealingLR(
+            self.opt_g,
+            float(args.max_epoch)
+        )
+        self.scheduler_c = optim.lr_scheduler.CosineAnnealingLR(
+            self.opt_c,
+            float(args.max_epoch)
+        )
 
     def set_optimizer(self, which_opt='momentum', lr=0.001, momentum=0.9):
         if which_opt == 'momentum':
@@ -311,7 +320,6 @@ class Solver(object):
                                          self.opt_c.param_groups[0]['lr'],
                                          self.opt_g.param_groups[0]['lr']))
                     record.close()
-
 
     def test(self, epoch, record_file=None, save_model=False):
         criterion = nn.CrossEntropyLoss().cuda()

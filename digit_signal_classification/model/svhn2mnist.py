@@ -18,8 +18,18 @@ class Feature(nn.Module):
         self.bn1_fc = nn.BatchNorm1d(3072)
 
     def forward(self, x):
-        x = F.max_pool2d(F.relu(self.bn1(self.conv1(x))), stride=2, kernel_size=3, padding=1)
-        x = F.max_pool2d(F.relu(self.bn2(self.conv2(x))), stride=2, kernel_size=3, padding=1)
+        x = F.max_pool2d(
+            F.relu(self.bn1(self.conv1(x))),
+            stride=2,
+            kernel_size=3,
+            padding=1
+        )
+        x = F.max_pool2d(
+            F.relu(self.bn2(self.conv2(x))),
+            stride=2,
+            kernel_size=3,
+            padding=1
+        )
         x = F.relu(self.bn3(self.conv3(x)))
         x = x.view(x.size(0), 8192)
         x = F.relu(self.bn1_fc(self.fc1(x)))
@@ -84,7 +94,6 @@ class Predictor(nn.Module):
             if only_mu:
                 # Only use mu for classification
                 out = F.linear(x, self.mu2, self.b2)
-
                 return [out]
             else:
                 classifiers = []

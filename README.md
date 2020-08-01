@@ -1,12 +1,15 @@
-# Stochastic Classifiers for Unsupervised Domain Adaptation (CVPR2020)
+# Stochastic Classifiers for Unsupervised Domain Adaptation (CVPR2020)[Paper Link](https://openaccess.thecvf.com/content_CVPR_2020/papers/Lu_Stochastic_Classifiers_for_Unsupervised_Domain_Adaptation_CVPR_2020_paper.pdf)
 
 ## Introduction
 
 This is the implementation for STAR (STochastic clAssifieRs). The main idea for that is to build a distribution over the weights of the classifiers. With that, infinite number of classifiers can be sampled without extra parameters.
 
+## Architecture
+[[Architecture of STAR](https://github.com/zhiheLu/STAR_Stochastic_Classifiers_for_UDA/digit_signal_classification/architecture.jpg)]
+
 ## Citation
 
-If you find this helpful, please cite it. Thanks.
+If you find this helpful, please cite it.
 
 ```
 @InProceedings{Lu_2020_CVPR,
@@ -17,3 +20,7 @@ month = {June},
 year = {2020}
 }
 ```
+
+## Further discussion
+
+If you have any problems, please contact zhihe.lu@surrey.ac.uk or simply write it in the issue session.

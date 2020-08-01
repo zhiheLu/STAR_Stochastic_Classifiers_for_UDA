@@ -16,9 +16,24 @@ class Feature(nn.Module):
         self.bn3 = nn.BatchNorm2d(256)
 
     def forward(self, x):
-        x = F.max_pool2d(F.relu(self.bn1(self.conv1(x))), stride=2, kernel_size=2, padding=0)
-        x = F.max_pool2d(F.relu(self.bn2(self.conv2(x))), stride=2, kernel_size=2, padding=0)
-        x = F.max_pool2d(F.relu(self.bn3(self.conv3(x))), stride=2, kernel_size=2, padding=0)
+        x = F.max_pool2d(
+            F.relu(self.bn1(self.conv1(x))),
+            stride=2,
+            kernel_size=2,
+            padding=0
+        )
+        x = F.max_pool2d(
+            F.relu(self.bn2(self.conv2(x))),
+            stride=2,
+            kernel_size=2,
+            padding=0
+        )
+        x = F.max_pool2d(
+            F.relu(self.bn3(self.conv3(x))),
+            stride=2,
+            kernel_size=2,
+            padding=0
+        )
         x = x.view(x.size(0), 6400)
         return x
 

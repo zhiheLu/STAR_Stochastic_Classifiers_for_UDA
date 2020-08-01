@@ -6,7 +6,7 @@ import os
 import time
 
 # Training settings
-parser = argparse.ArgumentParser(description='PyTorch Stochastic Classifier Implementation')
+parser = argparse.ArgumentParser(description='PyTorch Stochastic Classifiers Implementation')
 parser.add_argument('--all_use', type=str, default='no', metavar='N',
                     help='use all training data? in usps adaptation')
 parser.add_argument('--batch-size', type=int, default=128, metavar='N',
@@ -117,10 +117,18 @@ def main():
         solver.test(0)
     else:
         for epoch in range(args.max_epoch):
-            solver.train(epoch, record_file=record_train, loss_process=args.loss_process)
+            solver.train(
+                epoch,
+                record_file=record_train,
+                loss_process=args.loss_process
+            )
 
             if epoch % 1 == 0:
-                solver.test(epoch, record_file=record_test, save_model=args.save_model)
+                solver.test(
+                    epoch,
+                    record_file=record_test,
+                    save_model=args.save_model
+                )
 
 
 if __name__ == '__main__':
